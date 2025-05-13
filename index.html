@@ -3,67 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Manitham Trust - Empowering Communities">
     <title>Manitham Trust</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Manitham Trust</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
     </header>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Manitham Trust is dedicated to supporting those in need through charitable work, community initiatives, and more.</p>
-    </section>
-
-    <section id="gallery">
-        <h2>Our Gallery</h2>
-        <div class="gallery-container">
-            <img src="https://images.unsplash.com/photo-1506748686219-6c8f70b29b50?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGZvc3RlcnxlbnwwfDB8fHwxNjg0OTgxOTQ5&ixlib=rb-1.2.1&q=80&w=1080" alt="Event 1">
-            <img src="https://images.unsplash.com/photo-1484671460804-9a3d4e3f4c3a?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZvc3RlcnxlbnwwfDB8fHwxNjg0OTgxOTcz&ixlib=rb-1.2.1&q=80&w=1080" alt="Event 2">
-            <img src="https://images.unsplash.com/photo-1558981293-d87590a5174e?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fGZvc3RlcnxlbnwwfDB8fHwxNjg0OTgxOTg5&ixlib=rb-1.2.1&q=80&w=1080" alt="Event 3">
-            <img src="https://images.unsplash.com/photo-1513746037597-c9cf19c9d509?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZvc3RlcnxlbnwwfDB8fHwxNjg0OTgxOTA2&ixlib=rb-1.2.1&q=80&w=1080" alt="Event 4">
+    
+    <section id="home">
+        <div class="hero">
+            <h1>Welcome to Manitham Trust</h1>
+            <p>Empowering Communities for a Better Tomorrow</p>
         </div>
     </section>
 
-    <section id="testimonials">
-        <h2>What People Say</h2>
-        <div class="testimonial-container">
-            <div class="testimonial">
-                <p>"Manitham Trust changed my life. The support they provide is unmatched!"</p>
-                <p><strong>- John Doe</strong></p>
-            </div>
-            <div class="testimonial">
-                <p>"A fantastic organization helping those who need it most."</p>
-                <p><strong>- Jane Smith</strong></p>
-            </div>
+    <section id="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Manitham Trust works tirelessly to uplift underprivileged communities through education, healthcare, and sustainable development projects.</p>
+            <img src="https://images.unsplash.com/photo-1530741090659-f6b865b01902" alt="Manitham Trust">
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1606764444693-443550f76725" alt="Service">
+            <h3>Community Outreach</h3>
+            <p>We help communities with essential resources, education, and health services.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1606764444693-443550f76725" alt="Service">
+            <h3>Healthcare Initiatives</h3>
+            <p>We provide medical support and awareness programs to improve community health.</p>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>If you'd like to get involved, donate, or learn more, please reach out to us!</p>
-        <form>
+        <form action="#" method="POST">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
         </form>
     </section>
 
     <footer>
-        <p>&copy; 2025 Manitham Trust. All Rights Reserved.</p>
+        <p>&copy; 2025 Manitham Trust. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
