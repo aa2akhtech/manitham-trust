@@ -3,61 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manitham Trust - Empowering Communities">
+    <meta name="description" content="Manitham Trust is dedicated to social causes and community welfare. Join us in making a difference.">
+    <meta name="keywords" content="Manitham Trust, Charity, Social Welfare, Community">
+    <meta name="author" content="Karthikeya">
     <title>Manitham Trust</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- GSAP Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <!-- PhotoSwipe Lightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+    <style>
+        /* Parallax scrolling effect */
+        .parallax {
+            background-image: url('https://via.placeholder.com/1600x800');
+            min-height: 500px;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        /* Sticky Header */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            z-index: 100;
+        }
+        /* Contact form styles */
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Sticky Header -->
     <header>
-        <div class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Manitham Trust</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    
-    <section id="home">
-        <div class="hero">
-            <h1>Welcome to Manitham Trust</h1>
-            <p>Empowering Communities for a Better Tomorrow</p>
+
+    <!-- Hero Section with Parallax Effect -->
+    <section class="parallax text-center text-light">
+        <div class="container py-5">
+            <h1 class="display-4">Welcome to Manitham Trust</h1>
+            <p>Your support makes a world of difference.</p>
         </div>
     </section>
 
-    <section id="about">
-        <div class="about-content">
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
             <h2>About Us</h2>
-            <p>Manitham Trust works tirelessly to uplift underprivileged communities through education, healthcare, and sustainable development projects.</p>
-            <img src="https://images.unsplash.com/photo-1530741090659-f6b865b01902" alt="Manitham Trust">
+            <p>Manitham Trust is committed to community welfare and social causes. We work with local communities to bring about positive change.</p>
         </div>
     </section>
 
-    <section id="services">
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1606764444693-443550f76725" alt="Service">
-            <h3>Community Outreach</h3>
-            <p>We help communities with essential resources, education, and health services.</p>
-        </div>
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1606764444693-443550f76725" alt="Service">
-            <h3>Healthcare Initiatives</h3>
-            <p>We provide medical support and awareness programs to improve community health.</p>
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Our Gallery</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="https://via.placeholder.com/800x600" data-pswp-width="800" data-pswp-height="600">
+                        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Gallery Image 1">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://via.placeholder.com/800x600" data-pswp-width="800" data-pswp-height="600">
+                        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Gallery Image 2">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://via.placeholder.com/800x600" data-pswp-width="800" data-pswp-height="600">
+                        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Gallery Image 3">
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="POST">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <div class="form-container mx-auto" style="max-width: 600px;">
+                <form id="contact-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+            </div>
+        </div>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-4">
         <p>&copy; 2025 Manitham Trust. All rights reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS, Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <!-- PhotoSwipe JS -->
+    <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+    <!-- GSAP Animations -->
+    <script>
+        // Simple animation with GSAP
+        gsap.from(".parallax", { opacity: 0, duration: 2, y: -100 });
+
+        // Initialize PhotoSwipe gallery
+        const gallery = document.querySelectorAll('a[data-pswp-width]');
+        const items = Array.from(gallery).map(link => {
+            return {
+                src: link.getAttribute('href'),
+                w: link.getAttribute('data-pswp-width'),
+                h: link.getAttribute('data-pswp-height'),
+                title: link.querySelector('img').alt
+            };
+        });
+
+        gallery.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const pswpElement = document.querySelectorAll('.pswp')[0];
+                const options = { index: Array.from(gallery).indexOf(link) };
+                const galleryInstance = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                galleryInstance.init();
+            });
+        });
+    </script>
 </body>
 </html>
